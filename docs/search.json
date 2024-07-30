@@ -40,5 +40,411 @@
     "title": "Spatial Data Science for Public Health - Workshop",
     "section": "Hardware",
     "text": "Hardware\n\nLaptop in good working condition with atleast 8GB RAM (preferably 16GB)\nWorking WiFi connection"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html",
+    "href": "session1a-intro-gis-public-health_v2.html",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "Public health - demands a broader view!\nThe need for participatory decision making in public health\nThe transparency of open data science approach\n\nThe third upcoming area of research methods\n\nObservational\nExperimental\nComputational/data science/ML/AI, etc.\n\n\n\n\n\nData that defines geographical features like roads, rivers\nSoil types, land use, elevation\nDemographics, socioeconomic attributes\nEnvironmental, climate, air-quality\nAnnotations that label features and places\n\n\n\n\n\n\n\nAnalyse and extract insights from geospatial data\nWork with real-world data on a number of domains and problems\nAcquire key data science skills and important tools to answer spatial questions\n\n\n\nA valuable tool for public health policy advocacy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHard Skills - Programming Language - Transparency and Reproducibility\nSoft Skills - Communication - Storytelling - Geospatial analytics - Ethical skills\n\n\n\n\n\n\n\nQGIS and GRASS has revolutionized Open source Geographic Information Systems (GIS).\nHowever, the reproducibility aspect has many challenges\n\n\n\n\n\nR and\nPython\n\nare a good way to bring in reproducible algorithms for GIS/SDS\n\n\n\n\n\n\n\nHigh-performance computer hardware\nEfficient algorithms to process vast data sets\n\n\n\n\n\nScalable solutions with the R\nextract valuable insights from the noise\n\n\n\n\n\nThe advent of spatial databases\n\n\n\n\n\nTraditionally data in healthcare are:\n\nCollected for the purpose (carefully designed)\nDetailed and informative (“rich profile and portraits”)\nHigh quality\n\nHowever, they are:\n\nMassive enterprises (very costly)\nCoarse resolution (need to be aggregated to protect privacy)\nSlow - the more detailed, the less frequent they are available\n\n\n\n\n\nDecennial census (census geographies)\nLongitudinal surveys\nCustom collected surveys, interviews etc.\nEconomic or well-being indicators\n\n\n\n\n\n\nTied into the Geodata revolution\nAccidental: created for different purposes but available for analysis as a side product\nDiverse: resolution and quality but, potentially much more detailed in both space and time\n\n\n\n\n\nBias\nTechnical barriers\nMethodological “mismatch”"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#introduction-1",
+    "href": "session1a-intro-gis-public-health_v2.html#introduction-1",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "Public health - demands a broader view!\nThe need for participatory decision making in public health\nThe transparency of open data science approach\n\nThe third upcoming area of research methods\n\nObservational\nExperimental\nComputational/data science/ML/AI, etc.\n\n\n\n\n\nData that defines geographical features like roads, rivers\nSoil types, land use, elevation\nDemographics, socioeconomic attributes\nEnvironmental, climate, air-quality\nAnnotations that label features and places"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#what-is-geo-spatial-data-science",
+    "href": "session1a-intro-gis-public-health_v2.html#what-is-geo-spatial-data-science",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "Analyse and extract insights from geospatial data\nWork with real-world data on a number of domains and problems\nAcquire key data science skills and important tools to answer spatial questions\n\n\n\nA valuable tool for public health policy advocacy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHard Skills - Programming Language - Transparency and Reproducibility\nSoft Skills - Communication - Storytelling - Geospatial analytics - Ethical skills"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#tools-for-spatial-data-science-sds",
+    "href": "session1a-intro-gis-public-health_v2.html#tools-for-spatial-data-science-sds",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "QGIS and GRASS has revolutionized Open source Geographic Information Systems (GIS).\nHowever, the reproducibility aspect has many challenges\n\n\n\n\n\nR and\nPython\n\nare a good way to bring in reproducible algorithms for GIS/SDS"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#the-geodata-revolution",
+    "href": "session1a-intro-gis-public-health_v2.html#the-geodata-revolution",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "High-performance computer hardware\nEfficient algorithms to process vast data sets\n\n\n\n\n\nScalable solutions with the R\nextract valuable insights from the noise\n\n\n\n\n\nThe advent of spatial databases"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#healthcare-data",
+    "href": "session1a-intro-gis-public-health_v2.html#healthcare-data",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "Traditionally data in healthcare are:\n\nCollected for the purpose (carefully designed)\nDetailed and informative (“rich profile and portraits”)\nHigh quality\n\nHowever, they are:\n\nMassive enterprises (very costly)\nCoarse resolution (need to be aggregated to protect privacy)\nSlow - the more detailed, the less frequent they are available\n\n\n\n\n\nDecennial census (census geographies)\nLongitudinal surveys\nCustom collected surveys, interviews etc.\nEconomic or well-being indicators"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#new-forms-of-spatial-data",
+    "href": "session1a-intro-gis-public-health_v2.html#new-forms-of-spatial-data",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "Tied into the Geodata revolution\nAccidental: created for different purposes but available for analysis as a side product\nDiverse: resolution and quality but, potentially much more detailed in both space and time"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#challenges-arribas-bel-2014",
+    "href": "session1a-intro-gis-public-health_v2.html#challenges-arribas-bel-2014",
+    "title": "Introduction to GIS for Public Health",
+    "section": "",
+    "text": "Bias\nTechnical barriers\nMethodological “mismatch”"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#spatial-visualization",
+    "href": "session1a-intro-gis-public-health_v2.html#spatial-visualization",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Spatial Visualization",
+    "text": "Spatial Visualization\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBy encoding information visually, they allow to present large amounts of numbers in a meaningful way."
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#a-map-for-everyone",
+    "href": "session1a-intro-gis-public-health_v2.html#a-map-for-everyone",
+    "title": "Introduction to GIS for Public Health",
+    "section": "A Map for Everyone",
+    "text": "A Map for Everyone\n\nA Real Public Health Tool\n\nMaps can fulfill several needs, looking very different depending on the end-goal.\n\n\n\nThree Main Dimensions\n\nKnowledge of what is being plotted\nTarget audience\nDegree of interactivity\n\n\n\nMacEachren & Kraak (1997)"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#maceachren-kraak-1997",
+    "href": "session1a-intro-gis-public-health_v2.html#maceachren-kraak-1997",
+    "title": "Introduction to GIS for Public Health",
+    "section": "MacEachren & Kraak (1997)",
+    "text": "MacEachren & Kraak (1997)"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#dibiases-1990-swoopy",
+    "href": "session1a-intro-gis-public-health_v2.html#dibiases-1990-swoopy",
+    "title": "Introduction to GIS for Public Health",
+    "section": "DiBiase’s (1990) “Swoopy”",
+    "text": "DiBiase’s (1990) “Swoopy”\nTranslating numbers into a (visual) language that the human brain “speaks better”"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#exploratory-visualization",
+    "href": "session1a-intro-gis-public-health_v2.html#exploratory-visualization",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Exploratory Visualization",
+    "text": "Exploratory Visualization\n &gt; “forces us to notice what we never expected to see”\n\n(Tukey 1977: vi)\n\n\n\nMostly for researchers in the course of the research process.\nMany, quick and dirty, and rather unattractive graphs."
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#explanatory-visualization",
+    "href": "session1a-intro-gis-public-health_v2.html#explanatory-visualization",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Explanatory Visualization",
+    "text": "Explanatory Visualization\n &gt; “forces readers to see the information the designer wanted to convey”\n\n(Kosslyn 1994: 271)\n\n\n\nMostly for others after the research is completed.\nFew, carefully crafted, and attractive graphs."
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#choropleths",
+    "href": "session1a-intro-gis-public-health_v2.html#choropleths",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Choropleths",
+    "text": "Choropleths\n\nThematic map in which values of a variable are encoded using a colour gradient of some sort\n\n\nCounterpart of the histogram\n\n\nBoth allows us to guage the distribution of a variable."
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#spatial-weights-1",
+    "href": "session1a-intro-gis-public-health_v2.html#spatial-weights-1",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Spatial Weights",
+    "text": "Spatial Weights\nFor a statistical method to be explicitly spatial, it needs to contain some representation of the geography, or spatial context.\n\n(Geo)-Spatial Visualization:\n\ntranslating numbers into a (visual) language (colors) that the human brain can interpret.\n\n\n\nSpatial Weights Matrices:\n\ntranslating geography into a (numerical) language that a computer can interpret."
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#spatial-weight-matrices",
+    "href": "session1a-intro-gis-public-health_v2.html#spatial-weight-matrices",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Spatial Weight Matrices",
+    "text": "Spatial Weight Matrices\nSpatial Weights Matrices are building block for spatial analysis and statistics.\n\nThey are used to assign a weighted average or sum of neighbouring data values to an observation, or other point in space.\nRelates to concepts of spatial ‘smoothing’ and interpolating data"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#applications-of-spatial-weights",
+    "href": "session1a-intro-gis-public-health_v2.html#applications-of-spatial-weights",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Applications of Spatial weights",
+    "text": "Applications of Spatial weights\nSpatial weights form the core element in several spatial analysis techniques\n\nSpatial autocorrelation\nSpatial clustering/geo-demographics\nSpatial regression"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#spatial-heterogeneity",
+    "href": "session1a-intro-gis-public-health_v2.html#spatial-heterogeneity",
+    "title": "Introduction to GIS for Public Health",
+    "section": "Spatial Heterogeneity",
+    "text": "Spatial Heterogeneity\nMost influential local determinants of household energy expenditure\n\n\n\n\n\n\n\nMashhoodi et al., 2019 (doi:10.1080/19475683.2018.1557253)"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#redcap-and-mlr",
+    "href": "session1a-intro-gis-public-health_v2.html#redcap-and-mlr",
+    "title": "Introduction to GIS for Public Health",
+    "section": "REDCAP and MLR",
+    "text": "REDCAP and MLR\nLate-stage breast cancer rates in Chicago region in 2000: (a) ZIP code areas, (b) REDCAP-constructed areas\n ::: aside Wang et al., 2015 (doi:10.1080/19475683.2019.1702099) :::"
+  },
+  {
+    "objectID": "session1a-intro-gis-public-health_v2.html#sfca",
+    "href": "session1a-intro-gis-public-health_v2.html#sfca",
+    "title": "Introduction to GIS for Public Health",
+    "section": "2SFCA",
+    "text": "2SFCA\n\nTwo-step floating catchment area (2SFCA) method\nHospital potential crowdedness\n\n\n\n\n\n\n\n\nWang et al., 2018 (10.1080/19475683.2019.1702099)"
+  },
+  {
+    "objectID": "session2b-spatial-data-vis.html",
+    "href": "session2b-spatial-data-vis.html",
+    "title": "Principles of Spatial Data Visualization",
+    "section": "",
+    "text": "Geography and Geospatial Science Working Group (GeoSWG) recognised the need for best practices in cartography.\n\nVisual contrast\nLegibility\nFigure-Ground Orientation\nHierarchical Organization\nBalance\n\n\n These guidelines, help the researchers develop high-quality, consistent map products."
+  },
+  {
+    "objectID": "session2b-spatial-data-vis.html#spatial-data-visualization",
+    "href": "session2b-spatial-data-vis.html#spatial-data-visualization",
+    "title": "Principles of Spatial Data Visualization",
+    "section": "",
+    "text": "Geography and Geospatial Science Working Group (GeoSWG) recognised the need for best practices in cartography.\n\nVisual contrast\nLegibility\nFigure-Ground Orientation\nHierarchical Organization\nBalance\n\n\n These guidelines, help the researchers develop high-quality, consistent map products."
+  },
+  {
+    "objectID": "session2b-spatial-data-vis.html#cartographic-guidelines-for-public-health",
+    "href": "session2b-spatial-data-vis.html#cartographic-guidelines-for-public-health",
+    "title": "Principles of Spatial Data Visualization",
+    "section": "Cartographic Guidelines for Public Health",
+    "text": "Cartographic Guidelines for Public Health\n\n\n\nCDC, Atlanta\nSome important aspects:\n\nMap Elements\n\nTitle and Borders\nNorth Arrow / Graticule / Scale\nInset Maps\nLabels and Legend\n\nOther Elements\n\nData Sources\nDates\nProjection\n\n\n\n\n\nhttps://www.cdc.gov/dhdsp/maps/gisx/resources/cartographic_guidelines.pdf"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html",
+    "href": "session2c-intro-sf-package.html",
+    "title": "Introduction to the SF package",
+    "section": "",
+    "text": "install.packages(\"sf\")\nThe sf package is an R implementation of Simple Features.\nThis package incorporates:\n\na new spatial data class system in R\nfunctions for reading and writing data\ntools for spatial operations on vectors"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#the-sf-package",
+    "href": "session2c-intro-sf-package.html#the-sf-package",
+    "title": "Introduction to the SF package",
+    "section": "",
+    "text": "install.packages(\"sf\")\nThe sf package is an R implementation of Simple Features.\nThis package incorporates:\n\na new spatial data class system in R\nfunctions for reading and writing data\ntools for spatial operations on vectors"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#geometry-types-in-sf",
+    "href": "session2c-intro-sf-package.html#geometry-types-in-sf",
+    "title": "Introduction to the SF package",
+    "section": "Geometry Types in sf",
+    "text": "Geometry Types in sf"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#loading-sf-package",
+    "href": "session2c-intro-sf-package.html#loading-sf-package",
+    "title": "Introduction to the SF package",
+    "section": "Loading sf package",
+    "text": "Loading sf package\n\nlibrary(sf)\n\nfs::dir_tree(here(\"spatial_files\", \"kl_pop_centers\"))\n\nC:/Users/Arun/Dropbox/Workshops/SummerSchool2024_GIS4PublicHealth/spatial_files/kl_pop_centers\n├── kl_pop_centers.dbf\n├── kl_pop_centers.prj\n├── kl_pop_centers.shp\n└── kl_pop_centers.shx"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#view-the-sf-object",
+    "href": "session2c-intro-sf-package.html#view-the-sf-object",
+    "title": "Introduction to the SF package",
+    "section": "View the sf object",
+    "text": "View the sf object\n\nkl_pop_centers\n\nSimple feature collection with 170 features and 14 fields\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: 74.95388 ymin: 8.35761 xmax: 77.28071 ymax: 12.60804\nGeodetic CRS:  WGS 84\nFirst 10 features:\n   Rotation Scale    name_of_to      district  state ELEVATION     District_1\n1         0     0 VADAKKANCHERI      PALAKKAD KERALA         0       P&gt;LAKK&gt;D\n2         0     0      ANGAMALI     ERNAKULAM KERALA         0      ERN&gt;KULAM\n3         0     0    MALAYATLUR     ERNAKULAM KERALA         0      ERN&gt;KULAM\n4         0     0        KALADI     ERNAKULAM KERALA         0      ERN&gt;KULAM\n5         0     0      TOMALLUR PATTANAMTITTA KERALA         0 PATTANAMTHITTA\n6         0     0     GURUVAYUR      THRISSUR KERALA         0        TRISS@R\n7         0     0 TRIMBRANALLUR      THRISSUR KERALA         0        TRISS@R\n8         0     0      KADIKKAD      THRISSUR KERALA         0        TRISS@R\n9         0     0     CHALAKUDI      THRISSUR KERALA         0        TRISS@R\n10        0     0          MALA      THRISSUR KERALA         0        TRISS@R\n   STATE_1     TEHSIL Shape_Leng Shape_Area pop_2020      lon       lat\n1   KERALA    &gt;LATT@R   150475.2  578919605   456575 76.48236 10.591936\n2   KERALA      &gt;LUVA   155736.4  550828742   615928 76.38866 10.200267\n3   KERALA      &gt;LUVA   155736.4  550828742   615928 76.51483 10.197496\n4   KERALA      &gt;LUVA   155736.4  550828742   615928 76.43405 10.167068\n5   KERALA       AD@R   110539.2  270281878   187760 76.68601  9.227245\n6   KERALA CH&gt;LAKKUDI   376808.1 1270626860  1153806 76.04651 10.598107\n7   KERALA CH&gt;LAKKUDI   376808.1 1270626860  1153806 76.10642 10.523958\n8   KERALA CH&gt;LAKKUDI   376808.1 1270626860  1153806 75.96130 10.681153\n9   KERALA CH&gt;LAKKUDI   376808.1 1270626860  1153806 76.34039 10.308017\n10  KERALA CH&gt;LAKKUDI   376808.1 1270626860  1153806 76.26185 10.250355\n                    geometry\n1  POINT (76.48236 10.59194)\n2  POINT (76.38866 10.20027)\n3   POINT (76.51483 10.1975)\n4  POINT (76.43405 10.16707)\n5  POINT (76.68601 9.227245)\n6  POINT (76.04651 10.59811)\n7  POINT (76.10642 10.52396)\n8   POINT (75.9613 10.68115)\n9  POINT (76.34039 10.30802)\n10 POINT (76.26185 10.25036)"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#plot-the-sf-object",
+    "href": "session2c-intro-sf-package.html#plot-the-sf-object",
+    "title": "Introduction to the SF package",
+    "section": "Plot the sf object",
+    "text": "Plot the sf object\n\n\nkl_pop_centers %&gt;%\n  ggplot() +\n  geom_sf()"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#plot-the-sf-object-1",
+    "href": "session2c-intro-sf-package.html#plot-the-sf-object-1",
+    "title": "Introduction to the SF package",
+    "section": "Plot the sf object",
+    "text": "Plot the sf object\n\n\nkl_pop_centers %&gt;%\n  ggplot() +\n  geom_sf(aes(color = district))"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#concept-of-the-sf-package",
+    "href": "session2c-intro-sf-package.html#concept-of-the-sf-package",
+    "title": "Introduction to the SF package",
+    "section": "Concept of the sf package",
+    "text": "Concept of the sf package"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#dependencies-of-the-sf-package",
+    "href": "session2c-intro-sf-package.html#dependencies-of-the-sf-package",
+    "title": "Introduction to the SF package",
+    "section": "Dependencies of the sf package",
+    "text": "Dependencies of the sf package"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#methods-in-sf",
+    "href": "session2c-intro-sf-package.html#methods-in-sf",
+    "title": "Introduction to the SF package",
+    "section": "Methods in sf",
+    "text": "Methods in sf\n\nmethods(class=\"sf\")\n\n  [1] $&lt;-                          [                           \n  [3] [[&lt;-                         [&lt;-                         \n  [5] aggregate                    anti_join                   \n  [7] arrange                      as.data.frame               \n  [9] cbind                        coerce                      \n [11] dbDataType                   dbWriteTable                \n [13] distinct                     dplyr_reconstruct           \n [15] drop_na                      duplicated                  \n [17] filter                       full_join                   \n [19] gather                       group_by                    \n [21] group_split                  identify                    \n [23] initialize                   inner_join                  \n [25] left_join                    merge                       \n [27] mutate                       nest                        \n [29] pivot_longer                 pivot_wider                 \n [31] plot                         print                       \n [33] rbind                        rename                      \n [35] rename_with                  right_join                  \n [37] rowwise                      sample_frac                 \n [39] sample_n                     select                      \n [41] semi_join                    separate                    \n [43] separate_rows                show                        \n [45] slice                        slotsFromS3                 \n [47] spread                       st_agr                      \n [49] st_agr&lt;-                     st_area                     \n [51] st_as_s2                     st_as_sf                    \n [53] st_as_sfc                    st_bbox                     \n [55] st_boundary                  st_break_antimeridian       \n [57] st_buffer                    st_cast                     \n [59] st_centroid                  st_collection_extract       \n [61] st_concave_hull              st_convex_hull              \n [63] st_coordinates               st_crop                     \n [65] st_crs                       st_crs&lt;-                    \n [67] st_difference                st_drop_geometry            \n [69] st_filter                    st_geometry                 \n [71] st_geometry&lt;-                st_inscribed_circle         \n [73] st_interpolate_aw            st_intersection             \n [75] st_intersects                st_is                       \n [77] st_is_valid                  st_join                     \n [79] st_line_merge                st_m_range                  \n [81] st_make_valid                st_minimum_rotated_rectangle\n [83] st_nearest_points            st_node                     \n [85] st_normalize                 st_point_on_surface         \n [87] st_polygonize                st_precision                \n [89] st_reverse                   st_sample                   \n [91] st_segmentize                st_set_precision            \n [93] st_shift_longitude           st_simplify                 \n [95] st_snap                      st_sym_difference           \n [97] st_transform                 st_triangulate              \n [99] st_triangulate_constrained   st_union                    \n[101] st_voronoi                   st_wrap_dateline            \n[103] st_write                     st_z_range                  \n[105] st_zm                        summarise                   \n[107] transform                    transmute                   \n[109] ungroup                      unite                       \n[111] unnest                      \nsee '?methods' for accessing help and source code"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#interactive-sf",
+    "href": "session2c-intro-sf-package.html#interactive-sf",
+    "title": "Introduction to the SF package",
+    "section": "Interactive sf",
+    "text": "Interactive sf\n\n\n\nkl_pop_centers %&gt;%\n  mapview::mapview()\n\n\n\n\n\n\n\n\nLight weight\nInteractive\nCross Platform"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#where-to-look-for-help",
+    "href": "session2c-intro-sf-package.html#where-to-look-for-help",
+    "title": "Introduction to the SF package",
+    "section": "Where to look for help?",
+    "text": "Where to look for help?\n\n\n\n\n\nhttps://posit.co/wp-content/uploads/2022/10/sf.pdf"
+  },
+  {
+    "objectID": "session2c-intro-sf-package.html#challenges-and-future-directions",
+    "href": "session2c-intro-sf-package.html#challenges-and-future-directions",
+    "title": "Introduction to the SF package",
+    "section": "Challenges and Future Directions",
+    "text": "Challenges and Future Directions\n\nNew Requirements for Spatial Analysis\n\nImmediate: The time from action to insight is reducing dramatically\nFresh: Primary data needs to be days or months old not years old\nMulti-source: Competitive alternative sources for completeness or validation\nContinuous: Analysis can no longer be a point in time\nAutomated: Possibility to continuously replicate and connect to decision tools"
+  },
+  {
+    "objectID": "session2a-exploring-data-with-r.html",
+    "href": "session2a-exploring-data-with-r.html",
+    "title": "Exploring Data with R",
+    "section": "",
+    "text": "EDA is the critical first step.\nEDA is a state of mind.\nEDA is exploring your ideas.\nEDA has no strict rules.\nEDA helps understand your data.\nEDA is an iterative cycle.\nEDA is a creative process.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition of EDA\n\n\n\n“It is mostly a philosophy of data analysis where the researcher examines the data without any pre-conceived ideas in order to discover what the data can tell him or her about the phenomena being studied.”\n\n\n\n“detective work – numerical detective work – or counting detective work – or graphical detective work”\n\n\nTukey, 1977 Page 1, Exploratory Data Analysis"
+  },
+  {
+    "objectID": "session2a-exploring-data-with-r.html#what-is-exploratory-data-analysis",
+    "href": "session2a-exploring-data-with-r.html#what-is-exploratory-data-analysis",
+    "title": "Exploring Data with R",
+    "section": "",
+    "text": "EDA is the critical first step.\nEDA is a state of mind.\nEDA is exploring your ideas.\nEDA has no strict rules.\nEDA helps understand your data.\nEDA is an iterative cycle.\nEDA is a creative process.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition of EDA\n\n\n\n“It is mostly a philosophy of data analysis where the researcher examines the data without any pre-conceived ideas in order to discover what the data can tell him or her about the phenomena being studied.”\n\n\n\n“detective work – numerical detective work – or counting detective work – or graphical detective work”\n\n\nTukey, 1977 Page 1, Exploratory Data Analysis"
+  },
+  {
+    "objectID": "session2a-exploring-data-with-r.html#how-to-do-eda",
+    "href": "session2a-exploring-data-with-r.html#how-to-do-eda",
+    "title": "Exploring Data with R",
+    "section": "How to do EDA?",
+    "text": "How to do EDA?\n\nThe easiest way to do EDA is to use questions as tools to guide your investigation.\nEDA is an important part of any data analysis, even if the questions are known already.\n\n\n“There are no routine statistical questions, only questionable statistical routines.”\n\n— Sir David Cox\n\n“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.”\n\n— John Tukey\n\nAsking the right questions\nKey to asking quality questions is to generate a large quantity of questions.\nIt is difficult to ask revealing questions at the start of the analysis.\nBut, each new question will expose a new aspect and increase your chance of making a discovery.\n\n\nWhat Questions to ask?\n\nWhat type of variation occurs within your variables?\nWhat type of covariation occurs between your variables?\nWhether your data meets your expectations or not.\nWhether the quality of your data is robust or not.\n\n\n\nThe Process of EDA\n\n\n\n\n\nImport\nTidy\nExplore\n\n\nTransform\nVisualize\nTransform\nVisualise …\n…\n\n\n\n\n\n6 W’s of Spatial EDA / ESDA\n\n\n\nWhat?\nWhere?\nWhen?\nWho?\nWhy?\nHow?\n\n\n\nQuestions to ask:\n\nWhat type of variation occurs within your variables?\nWhat type of covariation occurs between your variables?\nWhether your data meets your expectations or not.\nWhether the quality of your data is robust or not."
+  },
+  {
+    "objectID": "session2a-exploring-data-with-r.html#steps-for-any-good-data-anlysis-project",
+    "href": "session2a-exploring-data-with-r.html#steps-for-any-good-data-anlysis-project",
+    "title": "Exploring Data with R",
+    "section": "Steps for any good data anlysis project",
+    "text": "Steps for any good data anlysis project\n\n\n\nPreparing Tidy Data\n\nData Cleaning\nData Wrangling\n\n\n\nData Exploration\n\nData Transformation\nData Visualization\n\n\n\nStatistical Analysis\n\n\nPrepare Results\n\n\nDraw Inferences\n\n\nReport Findings"
+  },
+  {
+    "objectID": "session2a-exploring-data-with-r.html#data-wrangling-in-r",
+    "href": "session2a-exploring-data-with-r.html#data-wrangling-in-r",
+    "title": "Exploring Data with R",
+    "section": "Data Wrangling in R",
+    "text": "Data Wrangling in R\n\ndplyr Package\n\n\nThe dplyr is a powerful R-package to manipulate, clean and summarize unstructured data.\nIn short, it makes data exploration and data manipulation easy and fast in R.\n\n\n\n\n\n\nVerbs of the dplyr\n\nThere are many verbs in dplyr that are useful.\n\n\n\n\nUsing the pipe operator (|&gt; or %&gt;%)\n\n\nLet us load some data\n\n\nlibrary(tidyverse)\nlibrary(here)\nlibrary(rio)\n\nfilepath &lt;- here('data', \"who_tubercolosis_data.csv\")\n\ntb &lt;- filepath |&gt; import(setclass = 'tibble')\n\ntb\n\n\n\n# A tibble: 3,850 × 18\n   country   who_region  year    pop incidence_100k incidence_number hiv_percent\n   &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt;  &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;\n 1 Afghanis… EMR         2000 2.01e7            190            38000        0.36\n 2 Afghanis… EMR         2001 2.10e7            189            40000        0.3 \n 3 Afghanis… EMR         2002 2.20e7            189            42000        0.26\n 4 Afghanis… EMR         2003 2.31e7            189            44000        0.23\n 5 Afghanis… EMR         2004 2.41e7            189            46000        0.22\n 6 Afghanis… EMR         2005 2.51e7            189            47000        0.22\n 7 Afghanis… EMR         2006 2.59e7            189            49000        0.22\n 8 Afghanis… EMR         2007 2.66e7            189            50000        0.23\n 9 Afghanis… EMR         2008 2.73e7            189            52000        0.23\n10 Afghanis… EMR         2009 2.80e7            189            53000        0.24\n# ℹ 3,840 more rows\n# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,\n#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,\n#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,\n#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,\n#   case_detection_percent &lt;dbl&gt;\n\n\n\n\n\n\nTake a Quick Look at the data\n\n\ntb |&gt; \n  glimpse()\n\n\n\nRows: 3,850\nColumns: 18\n$ country                &lt;chr&gt; \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"A…\n$ who_region             &lt;chr&gt; \"EMR\", \"EMR\", \"EMR\", \"EMR\", \"EMR\", \"EMR\", \"EMR\"…\n$ year                   &lt;int&gt; 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,…\n$ pop                    &lt;int&gt; 20093756, 20966463, 21979923, 23064851, 2411897…\n$ incidence_100k         &lt;dbl&gt; 190, 189, 189, 189, 189, 189, 189, 189, 189, 18…\n$ incidence_number       &lt;int&gt; 38000, 40000, 42000, 44000, 46000, 47000, 49000…\n$ hiv_percent            &lt;dbl&gt; 0.36, 0.30, 0.26, 0.23, 0.22, 0.22, 0.22, 0.23,…\n$ hiv_incidence_100k     &lt;dbl&gt; 0.68, 0.57, 0.49, 0.44, 0.41, 0.42, 0.42, 0.43,…\n$ hiv_number             &lt;int&gt; 140, 120, 110, 100, 100, 100, 110, 120, 120, 13…\n$ mort_nohiv_100k        &lt;dbl&gt; 67.00, 62.00, 56.00, 57.00, 51.00, 46.00, 42.00…\n$ mort_nohiv_number      &lt;int&gt; 14000, 13000, 12000, 13000, 12000, 12000, 11000…\n$ mort_hiv_100k          &lt;dbl&gt; 0.15, 0.17, 0.27, 0.25, 0.21, 0.19, 0.18, 0.17,…\n$ mort_hiv_number        &lt;int&gt; 31, 35, 60, 57, 50, 48, 46, 45, 48, 55, 56, 61,…\n$ mort_100k              &lt;dbl&gt; 67.00, 62.00, 56.00, 57.00, 51.00, 46.00, 42.00…\n$ mort_number            &lt;int&gt; 14000, 13000, 12000, 13000, 12000, 12000, 11000…\n$ case_fatality_ratio    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ new_incidence_100k     &lt;dbl&gt; 35, 48, 63, 60, 76, 87, 98, 108, 104, 93, 97, 9…\n$ case_detection_percent &lt;dbl&gt; 19, 26, 33, 32, 40, 46, 52, 57, 55, 49, 51, 50,…\n\n\n\n\n\n\nCheck the first few rows\n\n\ntb |&gt; \n  head()\n\n\n\n# A tibble: 6 × 18\n  country    who_region  year    pop incidence_100k incidence_number hiv_percent\n  &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt;  &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;\n1 Afghanist… EMR         2000 2.01e7            190            38000        0.36\n2 Afghanist… EMR         2001 2.10e7            189            40000        0.3 \n3 Afghanist… EMR         2002 2.20e7            189            42000        0.26\n4 Afghanist… EMR         2003 2.31e7            189            44000        0.23\n5 Afghanist… EMR         2004 2.41e7            189            46000        0.22\n6 Afghanist… EMR         2005 2.51e7            189            47000        0.22\n# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,\n#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,\n#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,\n#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,\n#   case_detection_percent &lt;dbl&gt;\n\n\n\n\n\n\nCheck the dimensions and the column names\n\n\ndim(tb) \n\nnames(tb)\n\n\n\n[1] 3850   18\n\n\n [1] \"country\"                \"who_region\"             \"year\"                  \n [4] \"pop\"                    \"incidence_100k\"         \"incidence_number\"      \n [7] \"hiv_percent\"            \"hiv_incidence_100k\"     \"hiv_number\"            \n[10] \"mort_nohiv_100k\"        \"mort_nohiv_number\"      \"mort_hiv_100k\"         \n[13] \"mort_hiv_number\"        \"mort_100k\"              \"mort_number\"           \n[16] \"case_fatality_ratio\"    \"new_incidence_100k\"     \"case_detection_percent\"\n\n\n\n\n\n\nLets find the unique countries in the bottom 50 rows of the dataset\n\n\n# without the pipe\nunique(tail(tb, n = 50)$country)\n\n# with the pipe\ntb |&gt; \n  tail(50)  |&gt; \n  distinct(country)\n\n\n\n\n[1] \"Yemen\"    \"Zambia\"   \"Zimbabwe\"\n\n\n# A tibble: 3 × 1\n  country \n  &lt;chr&gt;   \n1 Yemen   \n2 Zambia  \n3 Zimbabwe\n\n\n\n\n\n\ndistinct() and count()\nThe distinct() function will return the distinct values of a column, while count() provides both the distinct values of a column and then number of times each value shows up.\n\n\ntb  |&gt;  \n  distinct(who_region)\n\n\n# A tibble: 6 × 1\n  who_region\n  &lt;chr&gt;     \n1 EMR       \n2 EUR       \n3 AFR       \n4 WPR       \n5 AMR       \n6 SEA       \n\n\n\n\n\ntb  |&gt;  \n  count(who_region)\n\n\n# A tibble: 6 × 2\n  who_region     n\n  &lt;chr&gt;      &lt;int&gt;\n1 AFR          835\n2 AMR          808\n3 EMR          396\n4 EUR          967\n5 SEA          196\n6 WPR          648\n\n\n\n\n\n\narrange()\nThe arrange() function does what it sounds like. It takes a data frame or tbl and arranges (or sorts) by column(s) of interest.\nThe first argument is the data, and subsequent arguments are columns to sort on.\nUse the desc() function to arrange by descending.\n\n\ntb |&gt; \n  count(who_region) |&gt; \n  arrange(n)\n\n\n# A tibble: 6 × 2\n  who_region     n\n  &lt;chr&gt;      &lt;int&gt;\n1 SEA          196\n2 EMR          396\n3 WPR          648\n4 AMR          808\n5 AFR          835\n6 EUR          967\n\n\n\n\n\ntb |&gt; \n  count(who_region) |&gt; \n  arrange(-n) # use can also use  arrange(desc(n))\n\n\n# A tibble: 6 × 2\n  who_region     n\n  &lt;chr&gt;      &lt;int&gt;\n1 EUR          967\n2 AFR          835\n3 AMR          808\n4 WPR          648\n5 EMR          396\n6 SEA          196\n\n\n\n\n\n\n\nLogical Operators in R\n\n\n\nIf you want to satisfy all of multiple conditions, you can use the “and” operator, &.\nThe “or” operator | (the vertical pipe character, shift-backslash) will return a subset that meet any of the conditions.\n\n\n\n\n\n\n\nfilter()\n\nFilter 2015 and above\n\n\ntb |&gt; \n  filter(year &gt;= 2015)\n\n\n\n# A tibble: 648 × 18\n   country   who_region  year    pop incidence_100k incidence_number hiv_percent\n   &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt;  &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;\n 1 Afghanis… EMR         2015 3.37e7          189              64000        0.3 \n 2 Afghanis… EMR         2016 3.47e7          189              65000        0.31\n 3 Afghanis… EMR         2017 3.55e7          189              67000        0.31\n 4 Albania   EUR         2015 2.92e6           16                480        0.82\n 5 Albania   EUR         2016 2.93e6           16                480        0.83\n 6 Albania   EUR         2017 2.93e6           20                580        0.85\n 7 Algeria   AFR         2015 3.99e7           74              30000        0.58\n 8 Algeria   AFR         2016 4.06e7           70              29000        0.6 \n 9 Algeria   AFR         2017 4.13e7           70              29000        0.62\n10 American… WPR         2015 5.55e4            8.3                5        0.1 \n# ℹ 638 more rows\n# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,\n#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,\n#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,\n#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,\n#   case_detection_percent &lt;dbl&gt;\n\n\n\n\n\n\nFilter India\n\n\ntb |&gt; \n  filter(country == \"India\")\n\n\n\n# A tibble: 18 × 18\n   country who_region  year      pop incidence_100k incidence_number hiv_percent\n   &lt;chr&gt;   &lt;chr&gt;      &lt;int&gt;    &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;\n 1 India   SEA         2000   1.05e9            289          3040000         7  \n 2 India   SEA         2001   1.07e9            288          3090000         7  \n 3 India   SEA         2002   1.09e9            287          3130000         7  \n 4 India   SEA         2003   1.11e9            285          3160000         7  \n 5 India   SEA         2004   1.13e9            282          3180000         7  \n 6 India   SEA         2005   1.14e9            279          3190000         7  \n 7 India   SEA         2006   1.16e9            274          3180000         7  \n 8 India   SEA         2007   1.18e9            268          3160000         7  \n 9 India   SEA         2008   1.20e9            261          3130000         6.8\n10 India   SEA         2009   1.21e9            254          3090000         6.6\n11 India   SEA         2010   1.23e9            247          3050000         6.3\n12 India   SEA         2011   1.25e9            241          3000000         5.9\n13 India   SEA         2012   1.26e9            234          2960000         5.4\n14 India   SEA         2013   1.28e9            228          2920000         4.9\n15 India   SEA         2014   1.29e9            223          2880000         4.3\n16 India   SEA         2015   1.31e9            217          2840000         4  \n17 India   SEA         2016   1.32e9            211          2790000         3.3\n18 India   SEA         2017   1.34e9            204          2740000         3.1\n# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,\n#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,\n#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,\n#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,\n#   case_detection_percent &lt;dbl&gt;\n\n\n\n\n\n\nFilter by year and country\n\n\ntb |&gt; \n  filter(year &gt;= 2015 & country == \"India\")\n\n\n\n# A tibble: 3 × 18\n  country who_region  year       pop incidence_100k incidence_number hiv_percent\n  &lt;chr&gt;   &lt;chr&gt;      &lt;int&gt;     &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;\n1 India   SEA         2015    1.31e9            217          2840000         4  \n2 India   SEA         2016    1.32e9            211          2790000         3.3\n3 India   SEA         2017    1.34e9            204          2740000         3.1\n# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,\n#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,\n#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,\n#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,\n#   case_detection_percent &lt;dbl&gt;\n\n\n\n\n\n\n\n%in% function\n\nTo filter() a categorical variable for only certain levels, we can use the %in% operator.\nLet’s see data from India, Nepal, Pakistan and Bangladesh First we will have to figure out how those are spelled in this dataset.\nOpen the spreadsheet viewer and find out.\nWe’ll see a way to find them in code later on in the course.\n\n\n\n# Create the Indian Subcontinent Variable\nindian_subcont &lt;- c(\n            \"India\",\n            \"Nepal\",\n            \"Pakistan\",\n            \"Bangladesh\", \n            \"Afghanistan\"\n            )\n\n# Filter using the %in% function\ntb  |&gt;  \n  filter(country %in% indian_subcont) %&gt;%\n  distinct(country)\n  \n\n\n\n# A tibble: 5 × 1\n  country    \n  &lt;chr&gt;      \n1 Afghanistan\n2 Bangladesh \n3 India      \n4 Nepal      \n5 Pakistan   \n\n\n\n\n\n\nsummarize()\n\nThe summarize() function summarizes multiple values to a single value.\nOn its own the summarize() function doesn’t seem to be all that useful.\n\nThe dplyr package provides a few convenience functions called n() and n_distinct() that tell you the number of observations or the number of distinct values of a particular variable.\nsummarize() is the same as summarise()\n\n\ntb |&gt; \n  summarize(mean_hiv_percent = mean(hiv_percent, na.rm = TRUE),\n            sd_hiv_percent = sd(hiv_percent, na.rm = TRUE))\n\n\n\n# A tibble: 1 × 2\n  mean_hiv_percent sd_hiv_percent\n             &lt;dbl&gt;          &lt;dbl&gt;\n1             12.1           17.7\n\n\n\n\n\n\ngroup_by()\n\nWe saw that summarize() isn’t that useful on its own. Neither is group_by().\nAll this does is takes an existing data frame and converts it into a grouped data frame where operations are performed by group.\nThe real power comes in where group_by() and summarize() are used together. First, write the group_by() statement. Then pipe the result to a call to summarize().\n\n\n\ntb |&gt; \n  group_by(who_region)  |&gt;  \n  summarize(mean_inc = mean(incidence_100k, na.rm = TRUE),\n            sd_inc = sd(incidence_100k, na.rm = TRUE))\n\n\n\n# A tibble: 6 × 3\n  who_region mean_inc sd_inc\n  &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt;\n1 AFR           297.   248. \n2 AMR            32.8   45.6\n3 EMR            83.7  123. \n4 EUR            42.7   51.1\n5 SEA           260.   151. \n6 WPR           126.   153. \n\n\n\n\n\n\nmutate()\n\nMutate creates a new variable or modifies an existing one.\n\n\n\n\nif_else()\nLets create a column called ind_sub if the country is in the Indian Subcontinent.\n\n\n\ntb |&gt; \n  mutate(indian_sub1 = if_else(country %in% indian_subcont, \n                              \"Indian Subcontinent\", \"Others\")) |&gt; \n  select(country, indian_sub1) |&gt; \n  distinct()\n\n\n\n# A tibble: 218 × 2\n   country             indian_sub1        \n   &lt;chr&gt;               &lt;chr&gt;              \n 1 Afghanistan         Indian Subcontinent\n 2 Albania             Others             \n 3 Algeria             Others             \n 4 American Samoa      Others             \n 5 Andorra             Others             \n 6 Angola              Others             \n 7 Anguilla            Others             \n 8 Antigua and Barbuda Others             \n 9 Argentina           Others             \n10 Armenia             Others             \n# ℹ 208 more rows\n\n\n\n\n\n\ncase_when()\nAlternative of if_else()\n\n\n\nif_else() vs case_when()\nNote that the if_else() function may result in slightly shorter code if you only need to code for 2 options.\nFor more options, nested if_else() statements become hard to read and could result in mismatched parentheses so case_when() will be a more elegant solution.\n\n\njoin()\n\nTypically in a data science or data analysis project one would have to work with many sources of data.\nThe researcher must be able to combine multiple datasets to answer the questions he or she is interested in.\nAs with the other dplyr verbs, there are different families of verbs that are designed to work with relational data and one of the most commonly used family of verbs are the mutating joins.\n\n\n\nMore on join()\n\nleft_join(x, y) which combines all columns in data frame x with those in data frame y but only retains rows from x.\nright_join(x, y) also keeps all columns but operates in the opposite direction, returning only rows from y.\nfull_join(x, y) combines all columns of x with all columns of y and retains all rows from both data frames.\ninner_join(x, y) combines all columns present in either x or y but only retains rows that are present in both data frames.\nanti_join(x, y) returns the columns from x only and retains rows of x that are not present in y.\nanti_join(y, x) returns the columns from y only and retains rows of y that are not present in x.\n\n\n\nVisual representation of the left_join()\n\n\n\nVisual representation of the right_join()\n\n\n\nVisual representation of the full_join()\n\n\n\n\npivot()\nMost often, when working with our data we may have to reshape our data from long format to wide format and back. We can use the pivot family of functions to achieve this task.\n\n\n\nOther Useful Functions\n\ndrop_na()\nThe drop_na() function is extremely useful for when we need to subset a variable to remove missing values.\n\n\nselect()\nWhile the filter() function allows you to return only certain rows matching a condition, the select() function returns only certain columns. The first argument is the data, and subsequent arguments are the columns you want."
+  },
+  {
+    "objectID": "prerequisites.html",
+    "href": "prerequisites.html",
+    "title": "GIS4PublicHealth - Workshop",
+    "section": "",
+    "text": "Congratulations! on being accepted to the Spatial Data Science for Public Health Workshop! We are thrilled to welcome you on board and hope that you are excited to take on this exciting journey.\n\n\n  \nThis document is aimed as being a primer to the workshop and contains some prerequisites and preliminary information that is necessary before you embark on this workshop. It is required that you go through this document and complete the necessary steps before you join us for the workshop."
+  },
+  {
+    "objectID": "prerequisites.html#prerequisites",
+    "href": "prerequisites.html#prerequisites",
+    "title": "GIS4PublicHealth - Workshop",
+    "section": "",
+    "text": "Congratulations! on being accepted to the Spatial Data Science for Public Health Workshop! We are thrilled to welcome you on board and hope that you are excited to take on this exciting journey.\n\n\n  \nThis document is aimed as being a primer to the workshop and contains some prerequisites and preliminary information that is necessary before you embark on this workshop. It is required that you go through this document and complete the necessary steps before you join us for the workshop."
+  },
+  {
+    "objectID": "prerequisites.html#before-we-get-started",
+    "href": "prerequisites.html#before-we-get-started",
+    "title": "GIS4PublicHealth - Workshop",
+    "section": "Before We Get Started…",
+    "text": "Before We Get Started…\nAs the name of the workshop suggests, we will be using R1 and RStudio2. You have access to both of these for free. R is the statistical programming language, and RStudio is the software that will let you interface with R easily. You can install R and RStudio on your personal laptop. Yes, you need a laptop which is in good working condition with at least 8GB of RAM (preferably 16GB) for this workshop.\n1 CRAN - https://cran.r-project.org/2 RStudio - https://www.rstudio.com/\nWhat is R?\n\n\nOpen source (free!) statistical programming language/software\nIt can be used for:\n\nWorking with data - cleaning, wrangling and transforming\nConducting analyses including advanced statistical methods\nCreating high-quality tables & figures\nCommunicate research with R Markdown\n\nIt is constantly growing!\nHas a strong online support community\nSince it’s one programming language, it is versatile enough to take you from raw data to publishable research using free, reproducible code!\n\n\n\n\nWhat is RStudio?\n\nRStudio is a free, open source IDE (integrated development environment) for R. (You must install R before you can install RStudio.) Its interface is organized so that the user can clearly view graphs, tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import CSV, Excel, SPSS (*.sav), and Stata (*.dta) files into R without having to write the code to do so."
+  },
+  {
+    "objectID": "prerequisites.html#installation",
+    "href": "prerequisites.html#installation",
+    "title": "GIS4PublicHealth - Workshop",
+    "section": "Installation",
+    "text": "Installation\n\nStep 1: Get R\n\n\n\nIf it installs correctly, you should be able to find the icon among your applications.\n\n\nGo here: https://cran.rstudio.com/\nChoose the correct “Download R for…” option from the top (probably Windows or macOS), then:\n\n\nFor Windows users, choose “Install R for the first time” (next to the base subdirectory) and then “Download R 4.4.0 for Windows”\nFor macOS users, select the appropriate version for your operating system (e.g. the latest release is version 4.4.0, will look something like R-4.4.0-arm64.pkg), then choose to Save or Open\nOnce downloaded, save, open once downloaded, agree to license, and install like you would any other software.\n\n\n\n\nStep 2: Get RStudio\n\n\n\nIf it installs correctly, you should be able to find the RStudio icon among your applications.\nRStudio is a user-friendly interface for working with R. That means you must have R already installed for RStudio to work. Make sure you’ve successfully installed R in Step 1, then…\n\nGo to https://posit.co/download/rstudio-desktop// to download RStudio Desktop (Open Source License). You’ll know you’re clicking the right one because it says “FREE” right above the download button.\nClick download, which takes you just down the page to where you can select the correct version under Installers for Supported Platforms (almost everyone will choose one of the first two options, RStudio for Windows or macOS).\nClick on the correct installer version, save, open once downloaded, agree to license and install like you would any other software. The version should be atleast RStudio Desktop 2023.06\n\nNote: If you have older versions of R/RStudio installed, we recommend updating to the newest versions.\n\n\nStep 3: Open RStudio\n\nOnce you have R then RStudio installed, you can find and click on the RStudio icon to open.\nWhen you open RStudio, you should get a workspace that looks something like the screen shown in Figure 3.\nIf this is what you see when you open RStudio, then you have R and RStudio installed correctly, and you can move on to Step 4.\n\nNow that you have installed RStudio, We recommend that you get guided tour of the RStudio interface at https://www.youtube.com/watch?v=FKl4V1lGkmU\n\n\n\n\n\nScreenshot of RStudio IDE\n\n\n\n\n\nStep 4: Install tidyverse\nTo install the tidyverse, type the following (exactly) in the console pane, then press ‘Enter’. We recommend just typing instead of copy and paste.\ninstall.packages(\"tidyverse\")\n\n\n\nTidyverse is a collection of essential R packages for data science. The packages under the tidyverse umbrella help us in performing and interacting with the data.\n\nhttps://www.tidyverse.org/packages/\n\n\n\n\n\n\nInstalling the tidyverse package\n\n\n\nAfter you press ‘Enter,’ you should see a whole bunch of text starting to appear in the Console Window (as shown in Figure 4). That’s good – it’s just a record of what’s being downloaded/installed. This process can go on for a few minutes (the tidyverse has a lot of different components). It will look something like this in the end.\n\n\n\n\nStep 5: Load tidyverse\n\n\nOnce it’s installed, you can ensure that everything worked by loading the tidyverse package. To load the tidyverse package you’ve just installed, type the following into the Console in RStudio, then press ‘Enter’:\n\nlibrary(\"tidyverse\")\n\nIf everything is installed correctly, you should see the same output as in Figure 5 once you load the package:\n\n\n\n\n\n\nOutput of calling the tidyverse package into the R Environment"
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html",
+    "href": "session1b-concepts-spatial-data-science.html",
+    "title": "Spatial Data Science with R",
+    "section": "",
+    "text": "Extremely useful in providing a fresh outlook to public health.\nProvides opportunity to enable overlaying data with its spatial representation\nSupports better planning and decision-making.\nThe convergence of many new sub-disciplines:\n\nmedical geography\npublic health informatics\ndata science\n\n\n\n\n\nMap of the plague in the province of Bari, Naples, 1690-1692\n\nThe map shows areas most affected and the boundaries of a military quarantine imposed to prevent its spread to neighboring towns and to other provinces.\n\n\n\n\nKoch T. Mapping the miasma: air, health, and place in early medical mapping. Cartographic Perspectives. 2005 Sep 1(52):4-27.\n\n\n\n\ndisease surveillance\nenvironmental health\ninfectious diseases\n\nmathematical modelling\nagent based modelling\n\npopulation genetics\nmedical imagining\ncancer biology\n\n\n\n\n\n\n\n\nWhile traditional uses of GIS in healthcare still are relevant, newer methods and advancing technology would be monumental for public health research."
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#gis-and-public-health",
+    "href": "session1b-concepts-spatial-data-science.html#gis-and-public-health",
+    "title": "Spatial Data Science with R",
+    "section": "",
+    "text": "Extremely useful in providing a fresh outlook to public health.\nProvides opportunity to enable overlaying data with its spatial representation\nSupports better planning and decision-making.\nThe convergence of many new sub-disciplines:\n\nmedical geography\npublic health informatics\ndata science\n\n\n\n\n\nMap of the plague in the province of Bari, Naples, 1690-1692\n\nThe map shows areas most affected and the boundaries of a military quarantine imposed to prevent its spread to neighboring towns and to other provinces.\n\n\n\n\nKoch T. Mapping the miasma: air, health, and place in early medical mapping. Cartographic Perspectives. 2005 Sep 1(52):4-27.\n\n\n\n\ndisease surveillance\nenvironmental health\ninfectious diseases\n\nmathematical modelling\nagent based modelling\n\npopulation genetics\nmedical imagining\ncancer biology\n\n\n\n\n\n\n\n\nWhile traditional uses of GIS in healthcare still are relevant, newer methods and advancing technology would be monumental for public health research."
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#what-is-spatial-data-science",
+    "href": "session1b-concepts-spatial-data-science.html#what-is-spatial-data-science",
+    "title": "Spatial Data Science with R",
+    "section": "What is Spatial Data Science?",
+    "text": "What is Spatial Data Science?\n\n\n\n\n\n\n\n\nDefinition\n\n\n\n\nSpatial data science (SDS) is a subset of Data Science that focuses on the unique characteristics of spatial data, moving beyond simply looking at where things happen to understand why they happen there.\n\nCARTO - https://carto.com/what-is-spatial-data-science\n\n\n\n\n\n\n\nLike data science, spatial data science seems to be a field that arises bottom-up in and from many existing scientific disciplines and industrial activities concerned with application of spatial data, rather than being a sub-discipline of an existing scientific discipline.\n\nEdzer Pebesma, Roger Bivand - Spatial Data Science With Applications in R\n\n\nhttps://r-spatial.org/book/\n\n\nHow is it different from Data Science?\n\n\n\nWhy Spatial Data Science for Public Health?\n\n\n\n\n\n\n\n\n\n\n\nPotential of Spatial Data Science for Public Health\n\nWealth of Spatial Data\n70% of all data that is generated data has spatial attributes\nRoutine health data can be geo-referenced\nProvide a gateway for researchers and practitioners to examine the role and harness the power of SDS in public health\nCoupled with the emerging field of spatial statistics, the analysis of this location-based data is developing new and novel directions for public health."
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#core-concepts-related-to-gis",
+    "href": "session1b-concepts-spatial-data-science.html#core-concepts-related-to-gis",
+    "title": "Spatial Data Science with R",
+    "section": "Core Concepts related to GIS",
+    "text": "Core Concepts related to GIS\nSpatial data are fundamental to many geographical analyses and spatial data science draws strongly from key geographical concepts\n\n\nFirst Law of Geography\n\n\n\n\n\n\n\n\nTobler’s First Law\n\n\n\n“Everything is related to everything else, but near things are more related than distant things”\n\nWaldo Tobler, 1970\n\n\n\n\n\n\n\n\n\nSpatial Dependence and Complete Spatial Randomness\n\nSpatial dependence is “the propensity for nearby locations to influence each other and to possess similar attributes”.\n\n\n\n\nThis means natural phenomenon are not spatially distributed at random.\n\ntemparature,\nrainfall,\npopulation density,\nsocio-economic conditions etc.\n\n\n\nIt can be measured by the indices of Spatial Autocorrelation.\n\n\nSpatial Autocorrelation\nRefers to the presence of systematic spatial variation in a mapped variable.\nThe terms spatial association and spatial dependence are often used to reflect spatial auto- correlation as well.\n\n\n\nIndices to measure Spatial Dependence\n\n\n\nCovariance Functions and Variograms\nGlobal Spatial Autocorrelation Measures\n\nMoran’s I index\nGeneral G-Statistic\nGeary’s C index\n\nLocal Indicators of Spatial Association (LISA)\n\nLocal Moran’s I index\nGetis-Ord Gi and Gi∗ statistics\n\nSpace-Time Correlation Analysis\n\nBivariate Moran’s I for STC\nDifferential Moran’s I\nEmerging Hot Spot Analysis (EHSA)\n\n\n\n\n\n\n\n\n\n\n\n\n\nMap Projections & coordinate reference system (CRS)\n\n\n\nMap projections try to transform the earth from its spherical shape (3D) to a planar shape (2D).\nA CRS then defines how the two-dimensional, projected map in your GIS relates to real places on the earth.\nThe decision of which depends on the extent of the area, analysis type, and often on the availability of data.\n\n\n\n\n\na) cylindrical projections, b) conical projections or c) planar projections.\n\n\n\n\n\nhttps://docs.qgis.org/3.28/en/docs/gentle_gis_introduction/coordinate_reference_systems.html\n\n\n\nWhy is the CRS Important?\n\nEarth is a GEIOD\n\n\n\nDifferent Projection Systems\n\n\n\nThe Mercator projection, for example, is used where angular relationships are important, but the relationship of areas are distorted.\n\n\n\n\n\n\nThe Mollweide Equal Area Cylindrical projection, for example, ensures that all mapped areas have the same proportional relationship to the areas on the Earth.\n\n\n\n\n\n\nThe Plate Carree Equidistant Cylindrical projection, for example, is used when accurate distance measurement is important.\n\n\n\n\n\n\nThe Robinson projection is a compromise where distortions of area, angular conformity and distance are acceptable.\n\n\n\n\n\n\nThe United Nations Logo uses the Azimuthal Equidistant projection\n\n\n\n\n\n\nWhat four commonly used projections do, as shown on the human head\n\n\n\n\n\nCRS in Action\n\n\n\nhttps://www.thetruesize.com"
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#data-science-as-a-methodological-approach",
+    "href": "session1b-concepts-spatial-data-science.html#data-science-as-a-methodological-approach",
+    "title": "Spatial Data Science with R",
+    "section": "Data Science as a methodological approach",
+    "text": "Data Science as a methodological approach\n\n\n\n\n\n\nNote\n\n\n\n\nThe key word in  data science is not data, it is science.\n\n– Jeff Leek, JHU Data Science Lab\n\n\n\nReproducible Research"
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#reproducible-research-1",
+    "href": "session1b-concepts-spatial-data-science.html#reproducible-research-1",
+    "title": "Spatial Data Science with R",
+    "section": "Reproducible Research",
+    "text": "Reproducible Research\n\n\n\nThere are four key elements of reproducible research:\n\ndata documentation\ndata publication\ncode publication,\noutput publication."
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#tools-for-spatial-data-science",
+    "href": "session1b-concepts-spatial-data-science.html#tools-for-spatial-data-science",
+    "title": "Spatial Data Science with R",
+    "section": "Tools for Spatial Data Science",
+    "text": "Tools for Spatial Data Science\n\n\n\nGIS related\nData Science related\nSpatial Data Science related\n\n\nR is the best spatial data science tool available for public health !!!\n\n R provides a range of powerful packages for geospatial analysis, enabling advanced computations and analytics."
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#r-spatial-analysis-ecosystem",
+    "href": "session1b-concepts-spatial-data-science.html#r-spatial-analysis-ecosystem",
+    "title": "Spatial Data Science with R",
+    "section": "R Spatial Analysis Ecosystem",
+    "text": "R Spatial Analysis Ecosystem\n\n\n\n\nCRAN Task View - Spatial Analysis\n\n\n\n\n\n\nhttps://cran.r-project.org/web/views/Spatial.html"
+  },
+  {
+    "objectID": "session1b-concepts-spatial-data-science.html#r-spatial-learning-resources",
+    "href": "session1b-concepts-spatial-data-science.html#r-spatial-learning-resources",
+    "title": "Spatial Data Science with R",
+    "section": "R Spatial Learning Resources",
+    "text": "R Spatial Learning Resources\n\n\n\nWealth of Resource material\nPowerful tools/packages\nseamlessly handle vector and raster data\ninractive visualization\nend-to-end solution\n\n \nNewest addition: Spatial Data Science: With Applications in R"
+  },
+  {
+    "objectID": "SIR_SMR_assignment.html",
+    "href": "SIR_SMR_assignment.html",
+    "title": "Mapmaking Exercise",
+    "section": "",
+    "text": "Explore non-spatial data\n\nkerala_covid_cases_df |&gt; glimpse()\n\nRows: 56\nColumns: 4\n$ Wave     &lt;chr&gt; \"First\", \"First\", \"First\", \"First\", \"First\", \"First\", \"First\"…\n$ District &lt;chr&gt; \"Alappuzha\", \"Ernakulam\", \"Idukki\", \"Kannur\", \"Kasaragod\", \"K…\n$ Cases    &lt;dbl&gt; 82076, 130735, 29449, 59719, 32277, 92640, 84556, 128970, 123…\n$ Deaths   &lt;dbl&gt; 406, 456, 48, 320, 111, 338, 217, 508, 449, 177, 131, 878, 49…\n\n\n\n\nCreate a Total Population column\n\n# Lets create a total population column\nkerala_district_sf &lt;- kerala_district_sf |&gt; \n  mutate(top_pop = sum(pop_2020, na.rm = T))\n\n\n\nVisualise the spatial files\n\nkerala_district_sf |&gt; \n  ggplot() +\n  geom_sf()\n\n\n\n\n\n\n\n\n\n\nCreate a choropleth map based on the population of the district\n\nkerala_district_sf |&gt; \n  ggplot() +\n  geom_sf(aes(fill = pop_2020)) +\n  scale_fill_distiller(palette = \"Spectral\")\n\n\n\n\n\n\n\n\n\n\nJoin both the spatial and non-spatial data\n\n# Step 1: Check if the district names are given correctly\n# Check if the district names in both the datasets are the same\n(kerala_covid_cases_df |&gt; distinct(District) |&gt; pull(District)) %in% (kerala_district_sf |&gt; distinct(distname) |&gt; pull(distname))\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE\n\n# Step 2: Reshape your data\nkerala_covid_cases_df_reshaped &lt;- kerala_covid_cases_df |&gt; \n  pivot_wider(names_from = Wave, values_from = c(Cases, Deaths))\n\n# Step 3: Identify the common variable in both the datasets (here it is `distname` and `District`)\nkerala_district_joined_sf &lt;- left_join(kerala_district_sf, kerala_covid_cases_df_reshaped, by = c(\"distname\" = \"District\"))\n\n\n\nASSIGNMENTS\n\n1. Create a new variable named estimating the standarized incidence rate.\n(SIR can be estimated by SIR = cases / ((total_cases / total_pop) * pop) )\n\njoined_df &lt;- kerala_covid_cases_df |&gt; \n  left_join(kerala_district_sf |&gt; st_drop_geometry(),\n            by = c(\"District\" = \"distname\")) |&gt; \n  group_by(Wave) |&gt; \n  mutate(SIR = Cases / ((sum(Cases)/ top_pop) * pop_2020)) |&gt; \n  ungroup()\n\nkerala_district_sf &lt;- kerala_district_sf |&gt; left_join(joined_df |&gt; select(District, SIR, Wave) |&gt; rename(distname = District))\n\nJoining with `by = join_by(distname)`\n\nkerala_district_sf |&gt; \n  ggplot() + \n  geom_sf(aes(fill = SIR))  +\n  scale_fill_distiller(palette = \"Spectral\") +\n  facet_wrap(~Wave)\n\n\n\n\n\n\n\n\n\n\n2. Create a new variable named estimating the standarized motality rate.\n(SMR can be estimated by SMR = deaths / ((total_deaths / total_pop) * pop) )\n\n# Write the code here\n\n\n\n3. Plot a choropleth map of Cases for each of the wave\n\n# Write the code here\n\n\n\n4. Plot a choropleth map of Deaths for each of the wave\n\n# Write the code here\n\n\n\n5. Plot a choropleth map of SIR for each of the wave\n\n# Write the code here\n\n\n\n6. Plot a choropleth map of SMR for each of the wave\n\n# Write the code here"
+  },
+  {
+    "objectID": "john_snow_map_excercise.html",
+    "href": "john_snow_map_excercise.html",
+    "title": "Recreating John Snow’s map in R",
+    "section": "",
+    "text": "library(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.1\n\n\nWarning: package 'ggplot2' was built under R version 4.4.1\n\n\nWarning: package 'tibble' was built under R version 4.4.1\n\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\nWarning: package 'readr' was built under R version 4.4.1\n\n\nWarning: package 'purrr' was built under R version 4.4.1\n\n\nWarning: package 'dplyr' was built under R version 4.4.1\n\n\nWarning: package 'stringr' was built under R version 4.4.1\n\n\nWarning: package 'forcats' was built under R version 4.4.1\n\n\nWarning: package 'lubridate' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(sf)\n\nWarning: package 'sf' was built under R version 4.4.1\n\n\nLinking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.3.1; sf_use_s2() is TRUE\n\nlibrary(HistData)\n\nWarning: package 'HistData' was built under R version 4.4.1"
+  },
+  {
+    "objectID": "john_snow_map_excercise.html#load-packages",
+    "href": "john_snow_map_excercise.html#load-packages",
+    "title": "Recreating John Snow’s map in R",
+    "section": "",
+    "text": "library(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.1\n\n\nWarning: package 'ggplot2' was built under R version 4.4.1\n\n\nWarning: package 'tibble' was built under R version 4.4.1\n\n\nWarning: package 'tidyr' was built under R version 4.4.1\n\n\nWarning: package 'readr' was built under R version 4.4.1\n\n\nWarning: package 'purrr' was built under R version 4.4.1\n\n\nWarning: package 'dplyr' was built under R version 4.4.1\n\n\nWarning: package 'stringr' was built under R version 4.4.1\n\n\nWarning: package 'forcats' was built under R version 4.4.1\n\n\nWarning: package 'lubridate' was built under R version 4.4.1\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(sf)\n\nWarning: package 'sf' was built under R version 4.4.1\n\n\nLinking to GEOS 3.12.1, GDAL 3.8.4, PROJ 9.3.1; sf_use_s2() is TRUE\n\nlibrary(HistData)\n\nWarning: package 'HistData' was built under R version 4.4.1"
   }
 ]

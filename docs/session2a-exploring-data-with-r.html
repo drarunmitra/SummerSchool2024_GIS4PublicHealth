@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.529">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>GIS4PublicHealth - Exploring Data with R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GIS4PublicHealth</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-day-three-(saturday" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Day Three (Saturday)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-day-three-(saturday">    
+        <li>
+    <a class="dropdown-item" href="./session1a-intro-gis-public-health_v2.html">
+ <span class="dropdown-text">Intro to GIS in Public Health</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./session1b-concepts-spatial-data-science.html">
+ <span class="dropdown-text">Concepts in Spatial Data Science</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-day-four-(sunday" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Day Four (Sunday)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-day-four-(sunday">    
+        <li>
+    <a class="dropdown-item" href="./session2a-exploring-data-with-r.html">
+ <span class="dropdown-text">Exploring Data with R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./session2b-spatial-data-vis.html">
+ <span class="dropdown-text">Principles of Spatial Data Visualization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./session2c-intro-sf-package.html">
+ <span class="dropdown-text">Introduction to the SF package</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-hands-on-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Hands on Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-hands-on-exercises">    
+        <li>
+    <a class="dropdown-item" href="./exercises/hands_on_exercise_1.R">
+ <span class="dropdown-text">Exercise 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/hands_on_exercise_2.R">
+ <span class="dropdown-text">Exercise 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/hands_on_exercise_3.R">
+ <span class="dropdown-text">Exercise 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/hands_on_exercise_4.R">
+ <span class="dropdown-text">Exercise 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/john_snow_map_excercise.html">
+ <span class="dropdown-text">Exercise 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/hands_on_exercise_6.R">
+ <span class="dropdown-text">Exercise 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/hands_on_exercise_7.R">
+ <span class="dropdown-text">Exercise 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./exercises/SIR_SMR_assignment.html">
+ <span class="dropdown-text">Exercise 8</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-exploratory-data-analysis" id="toc-what-is-exploratory-data-analysis" class="nav-link active" data-scroll-target="#what-is-exploratory-data-analysis">What is Exploratory Data Analysis?</a></li>
+  <li><a href="#how-to-do-eda" id="toc-how-to-do-eda" class="nav-link" data-scroll-target="#how-to-do-eda">How to do EDA?</a>
+  <ul class="collapse">
+  <li><a href="#asking-the-right-questions" id="toc-asking-the-right-questions" class="nav-link" data-scroll-target="#asking-the-right-questions">Asking the right questions</a></li>
+  <li><a href="#what-questions-to-ask" id="toc-what-questions-to-ask" class="nav-link" data-scroll-target="#what-questions-to-ask">What Questions to ask?</a></li>
+  <li><a href="#the-process-of-eda" id="toc-the-process-of-eda" class="nav-link" data-scroll-target="#the-process-of-eda">The Process of EDA</a></li>
+  <li><a href="#ws-of-spatial-eda-esda" id="toc-ws-of-spatial-eda-esda" class="nav-link" data-scroll-target="#ws-of-spatial-eda-esda">6 W’s of Spatial EDA / ESDA</a></li>
+  </ul></li>
+  <li><a href="#steps-for-any-good-data-anlysis-project" id="toc-steps-for-any-good-data-anlysis-project" class="nav-link" data-scroll-target="#steps-for-any-good-data-anlysis-project">Steps for any good data anlysis project</a></li>
+  <li><a href="#data-wrangling-in-r" id="toc-data-wrangling-in-r" class="nav-link" data-scroll-target="#data-wrangling-in-r">Data Wrangling in R</a>
+  <ul class="collapse">
+  <li><a href="#dplyr-package" id="toc-dplyr-package" class="nav-link" data-scroll-target="#dplyr-package"><code>dplyr</code> Package</a></li>
+  <li><a href="#verbs-of-the-dplyr" id="toc-verbs-of-the-dplyr" class="nav-link" data-scroll-target="#verbs-of-the-dplyr">Verbs of the <code>dplyr</code></a></li>
+  <li><a href="#using-the-pipe-operator-or" id="toc-using-the-pipe-operator-or" class="nav-link" data-scroll-target="#using-the-pipe-operator-or">Using the pipe operator (<code>|&gt;</code> or <code>%&gt;%</code>)</a></li>
+  <li><a href="#logical-operators-in-r" id="toc-logical-operators-in-r" class="nav-link" data-scroll-target="#logical-operators-in-r">Logical Operators in R</a></li>
+  <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter"><code>filter()</code></a></li>
+  <li><a href="#in-function" id="toc-in-function" class="nav-link" data-scroll-target="#in-function"><code>%in%</code> function</a></li>
+  <li><a href="#summarize" id="toc-summarize" class="nav-link" data-scroll-target="#summarize"><code>summarize()</code></a></li>
+  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by"><code>group_by()</code></a></li>
+  <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><code>mutate()</code></a></li>
+  <li><a href="#if_else" id="toc-if_else" class="nav-link" data-scroll-target="#if_else"><code>if_else()</code></a></li>
+  <li><a href="#case_when" id="toc-case_when" class="nav-link" data-scroll-target="#case_when"><code>case_when()</code></a></li>
+  <li><a href="#if_else-vs-case_when" id="toc-if_else-vs-case_when" class="nav-link" data-scroll-target="#if_else-vs-case_when"><code>if_else()</code> vs <code>case_when()</code></a></li>
+  <li><a href="#join" id="toc-join" class="nav-link" data-scroll-target="#join"><code>join()</code></a></li>
+  <li><a href="#pivot" id="toc-pivot" class="nav-link" data-scroll-target="#pivot"><code>pivot()</code></a></li>
+  <li><a href="#other-useful-functions" id="toc-other-useful-functions" class="nav-link" data-scroll-target="#other-useful-functions">Other Useful Functions</a></li>
+  </ul></li>
+  <li><a href="#more-resources-for-dplyr" id="toc-more-resources-for-dplyr" class="nav-link" data-scroll-target="#more-resources-for-dplyr">More Resources for <code>dplyr</code></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Exploring Data with R</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-is-exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-exploratory-data-analysis">What is Exploratory Data Analysis?</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p><strong>EDA</strong> is the critical first step.</p></li>
+<li><p><strong>EDA</strong> is a state of mind.</p></li>
+<li><p><strong>EDA</strong> is exploring your ideas.</p></li>
+<li><p><strong>EDA</strong> has no strict rules.</p></li>
+<li><p><strong>EDA</strong> helps understand your data.</p></li>
+<li><p><strong>EDA</strong> is an iterative cycle.</p></li>
+<li><p><strong>EDA</strong> is a creative process.</p></li>
+</ul>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:30%;">
+<p><img src="images/EDA.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition of EDA
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“It is mostly a <strong>philosophy</strong> of data analysis where the researcher examines the data without any pre-conceived ideas in order to discover what the data can tell him or her about the phenomena being studied.”</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><em>“detective work – numerical detective work – or counting detective work – or graphical detective work”</em></p>
+</blockquote>
+<ul>
+<li><strong>Tukey, 1977</strong> <em>Page 1, Exploratory Data Analysis</em></li>
+</ul>
+</section>
+<section id="how-to-do-eda" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-do-eda">How to do EDA?</h2>
+<ul>
+<li><p>The easiest way to do <strong>EDA</strong> is to use questions as tools to guide your investigation.</p></li>
+<li><p><strong>EDA</strong> is an important part of any data analysis, even if the questions are known already.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p><em>“There are no routine statistical questions, only questionable statistical routines.”</em></p>
+</blockquote>
+<p>— <strong>Sir David Cox</strong></p>
+<blockquote class="blockquote">
+<p><em>“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.”</em></p>
+</blockquote>
+<p>— <strong>John Tukey</strong></p>
+<section id="asking-the-right-questions" class="level3">
+<h3 class="anchored" data-anchor-id="asking-the-right-questions">Asking the right questions</h3>
+<p>Key to asking <strong><em>quality</em></strong> questions is to generate a large <strong><em>quantity</em></strong> of questions.</p>
+<p>It is difficult to ask revealing questions at the start of the analysis.</p>
+<p>But, each new question will expose a new aspect and increase your chance of making a discovery.</p>
+</section>
+<section id="what-questions-to-ask" class="level3">
+<h3 class="anchored" data-anchor-id="what-questions-to-ask">What Questions to ask?</h3>
+<ul>
+<li><p>What type of variation occurs within your variables?</p></li>
+<li><p>What type of covariation occurs between your variables?</p></li>
+<li><p>Whether your data meets your expectations or not.</p></li>
+<li><p>Whether the quality of your data is robust or not.</p></li>
+</ul>
+</section>
+<section id="the-process-of-eda" class="level3">
+<h3 class="anchored" data-anchor-id="the-process-of-eda">The Process of EDA</h3>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img src="images/data_exploration1.png" class="img-fluid"></p>
+</div><div class="column" style="width:30%;">
+<ol type="1">
+<li>Import</li>
+<li>Tidy</li>
+<li>Explore</li>
+</ol>
+<ul>
+<li>Transform</li>
+<li>Visualize</li>
+<li>Transform</li>
+<li>Visualise …</li>
+<li>…</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ws-of-spatial-eda-esda" class="level3">
+<h3 class="anchored" data-anchor-id="ws-of-spatial-eda-esda">6 W’s of Spatial EDA / ESDA</h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p>What?</p></li>
+<li><p>Where?</p></li>
+<li><p>When?</p></li>
+<li><p>Who?</p></li>
+<li><p>Why?</p></li>
+<li><p>How?</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<section id="questions-to-ask" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-ask">Questions to ask:</h3>
+<ul>
+<li><p>What type of variation occurs within your variables?</p></li>
+<li><p>What type of covariation occurs between your variables?</p></li>
+<li><p>Whether your data meets your expectations or not.</p></li>
+<li><p>Whether the quality of your data is robust or not.</p></li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+</section>
+<section id="steps-for-any-good-data-anlysis-project" class="level2">
+<h2 class="anchored" data-anchor-id="steps-for-any-good-data-anlysis-project">Steps for any good data anlysis project</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<section id="preparing-tidy-data" class="level3">
+<h3 class="anchored" data-anchor-id="preparing-tidy-data">Preparing Tidy Data</h3>
+<ul>
+<li>Data Cleaning</li>
+<li>Data Wrangling</li>
+</ul>
+</section>
+<section id="data-exploration" class="level3">
+<h3 class="anchored" data-anchor-id="data-exploration">Data Exploration</h3>
+<ul>
+<li>Data Transformation</li>
+<li>Data Visualization</li>
+</ul>
+</section>
+<section id="statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
+</section>
+<section id="prepare-results" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-results">Prepare Results</h3>
+</section>
+<section id="draw-inferences" class="level3">
+<h3 class="anchored" data-anchor-id="draw-inferences">Draw Inferences</h3>
+</section>
+<section id="report-findings" class="level3">
+<h3 class="anchored" data-anchor-id="report-findings">Report Findings</h3>
+</section>
+</div><div class="column" style="width:60%;">
+<p><img src="images/steps_SDA.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="data-wrangling-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="data-wrangling-in-r">Data Wrangling in R</h2>
+<section id="dplyr-package" class="level3">
+<h3 class="anchored" data-anchor-id="dplyr-package"><code>dplyr</code> Package</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>The <code>dplyr</code> is a powerful R-package to manipulate, clean and summarize unstructured data.</p>
+<p>In short, it makes data exploration and data manipulation easy and fast in R.</p>
+</div><div class="column" style="width:40%;">
+<p><img src="images/dplyr.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="verbs-of-the-dplyr" class="level3">
+<h3 class="anchored" data-anchor-id="verbs-of-the-dplyr">Verbs of the <code>dplyr</code></h3>
+<ul>
+<li>There are many verbs in <code>dplyr</code> that are useful.</li>
+</ul>
+<p><img src="images/dplyr_fns.JPG" class="img-fluid"></p>
+</section>
+<section id="using-the-pipe-operator-or" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-pipe-operator-or">Using the pipe operator (<code>|&gt;</code> or <code>%&gt;%</code>)</h3>
+<p><img src="images/pipes_dplyr.png" class="img-fluid"></p>
+<section id="let-us-load-some-data" class="level4">
+<h4 class="anchored" data-anchor-id="let-us-load-some-data">Let us load some data</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rio)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>filepath <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">'data'</span>, <span class="st">"who_tubercolosis_data.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tb <span class="ot">&lt;-</span> filepath <span class="sc">|&gt;</span> <span class="fu">import</span>(<span class="at">setclass =</span> <span class="st">'tibble'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>tb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3,850 × 18
+   country   who_region  year    pop incidence_100k incidence_number hiv_percent
+   &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt;  &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;
+ 1 Afghanis… EMR         2000 2.01e7            190            38000        0.36
+ 2 Afghanis… EMR         2001 2.10e7            189            40000        0.3 
+ 3 Afghanis… EMR         2002 2.20e7            189            42000        0.26
+ 4 Afghanis… EMR         2003 2.31e7            189            44000        0.23
+ 5 Afghanis… EMR         2004 2.41e7            189            46000        0.22
+ 6 Afghanis… EMR         2005 2.51e7            189            47000        0.22
+ 7 Afghanis… EMR         2006 2.59e7            189            49000        0.22
+ 8 Afghanis… EMR         2007 2.66e7            189            50000        0.23
+ 9 Afghanis… EMR         2008 2.73e7            189            52000        0.23
+10 Afghanis… EMR         2009 2.80e7            189            53000        0.24
+# ℹ 3,840 more rows
+# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,
+#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,
+#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,
+#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,
+#   case_detection_percent &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="take-a-quick-look-at-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="take-a-quick-look-at-the-data">Take a Quick Look at the data</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 3,850
+Columns: 18
+$ country                &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "A…
+$ who_region             &lt;chr&gt; "EMR", "EMR", "EMR", "EMR", "EMR", "EMR", "EMR"…
+$ year                   &lt;int&gt; 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,…
+$ pop                    &lt;int&gt; 20093756, 20966463, 21979923, 23064851, 2411897…
+$ incidence_100k         &lt;dbl&gt; 190, 189, 189, 189, 189, 189, 189, 189, 189, 18…
+$ incidence_number       &lt;int&gt; 38000, 40000, 42000, 44000, 46000, 47000, 49000…
+$ hiv_percent            &lt;dbl&gt; 0.36, 0.30, 0.26, 0.23, 0.22, 0.22, 0.22, 0.23,…
+$ hiv_incidence_100k     &lt;dbl&gt; 0.68, 0.57, 0.49, 0.44, 0.41, 0.42, 0.42, 0.43,…
+$ hiv_number             &lt;int&gt; 140, 120, 110, 100, 100, 100, 110, 120, 120, 13…
+$ mort_nohiv_100k        &lt;dbl&gt; 67.00, 62.00, 56.00, 57.00, 51.00, 46.00, 42.00…
+$ mort_nohiv_number      &lt;int&gt; 14000, 13000, 12000, 13000, 12000, 12000, 11000…
+$ mort_hiv_100k          &lt;dbl&gt; 0.15, 0.17, 0.27, 0.25, 0.21, 0.19, 0.18, 0.17,…
+$ mort_hiv_number        &lt;int&gt; 31, 35, 60, 57, 50, 48, 46, 45, 48, 55, 56, 61,…
+$ mort_100k              &lt;dbl&gt; 67.00, 62.00, 56.00, 57.00, 51.00, 46.00, 42.00…
+$ mort_number            &lt;int&gt; 14000, 13000, 12000, 13000, 12000, 12000, 11000…
+$ case_fatality_ratio    &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+$ new_incidence_100k     &lt;dbl&gt; 35, 48, 63, 60, 76, 87, 98, 108, 104, 93, 97, 9…
+$ case_detection_percent &lt;dbl&gt; 19, 26, 33, 32, 40, 46, 52, 57, 55, 49, 51, 50,…</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-the-first-few-rows" class="level4">
+<h4 class="anchored" data-anchor-id="check-the-first-few-rows">Check the first few rows</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 18
+  country    who_region  year    pop incidence_100k incidence_number hiv_percent
+  &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt;  &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;
+1 Afghanist… EMR         2000 2.01e7            190            38000        0.36
+2 Afghanist… EMR         2001 2.10e7            189            40000        0.3 
+3 Afghanist… EMR         2002 2.20e7            189            42000        0.26
+4 Afghanist… EMR         2003 2.31e7            189            44000        0.23
+5 Afghanist… EMR         2004 2.41e7            189            46000        0.22
+6 Afghanist… EMR         2005 2.51e7            189            47000        0.22
+# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,
+#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,
+#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,
+#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,
+#   case_detection_percent &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-the-dimensions-and-the-column-names" class="level4">
+<h4 class="anchored" data-anchor-id="check-the-dimensions-and-the-column-names">Check the dimensions and the column names</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(tb) </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(tb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3850   18</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "country"                "who_region"             "year"                  
+ [4] "pop"                    "incidence_100k"         "incidence_number"      
+ [7] "hiv_percent"            "hiv_incidence_100k"     "hiv_number"            
+[10] "mort_nohiv_100k"        "mort_nohiv_number"      "mort_hiv_100k"         
+[13] "mort_hiv_number"        "mort_100k"              "mort_number"           
+[16] "case_fatality_ratio"    "new_incidence_100k"     "case_detection_percent"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lets-find-the-unique-countries-in-the-bottom-50-rows-of-the-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="lets-find-the-unique-countries-in-the-bottom-50-rows-of-the-dataset">Lets find the unique countries in the bottom 50 rows of the dataset</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># without the pipe</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">tail</span>(tb, <span class="at">n =</span> <span class="dv">50</span>)<span class="sc">$</span>country)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># with the pipe</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tail</span>(<span class="dv">50</span>)  <span class="sc">|&gt;</span> </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(country)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Yemen"    "Zambia"   "Zimbabwe"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  country 
+  &lt;chr&gt;   
+1 Yemen   
+2 Zambia  
+3 Zimbabwe</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="distinct-and-count" class="level4">
+<h4 class="anchored" data-anchor-id="distinct-and-count"><code>distinct()</code> and <code>count()</code></h4>
+<p>The <code>distinct()</code> function will return the distinct values of a column, while <code>count()</code> provides both the distinct values of a column and then number of times each value shows up.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tb  <span class="sc">|&gt;</span>  </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(who_region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  who_region
+  &lt;chr&gt;     
+1 EMR       
+2 EUR       
+3 AFR       
+4 WPR       
+5 AMR       
+6 SEA       </code></pre>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tb  <span class="sc">|&gt;</span>  </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(who_region)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  who_region     n
+  &lt;chr&gt;      &lt;int&gt;
+1 AFR          835
+2 AMR          808
+3 EMR          396
+4 EUR          967
+5 SEA          196
+6 WPR          648</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="arrange" class="level4">
+<h4 class="anchored" data-anchor-id="arrange"><code>arrange()</code></h4>
+<p>The <code>arrange()</code> function does what it sounds like. It takes a data frame or tbl and arranges (or sorts) by column(s) of interest.</p>
+<p>The first argument is the data, and subsequent arguments are columns to sort on.</p>
+<p>Use the <code>desc()</code> function to arrange by descending.</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(who_region) <span class="sc">|&gt;</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  who_region     n
+  &lt;chr&gt;      &lt;int&gt;
+1 SEA          196
+2 EMR          396
+3 WPR          648
+4 AMR          808
+5 AFR          835
+6 EUR          967</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:60%;">
+<div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(who_region) <span class="sc">|&gt;</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>n) <span class="co"># use can also use  arrange(desc(n))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  who_region     n
+  &lt;chr&gt;      &lt;int&gt;
+1 EUR          967
+2 AFR          835
+3 AMR          808
+4 WPR          648
+5 EMR          396
+6 SEA          196</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="logical-operators-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="logical-operators-in-r">Logical Operators in R</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>If you want to satisfy <em>all</em> of multiple conditions, you can use the “and” operator, <code>&amp;</code>.</p></li>
+<li><p>The “or” operator <code>|</code> (the vertical pipe character, shift-backslash) will return a subset that meet <em>any</em> of the conditions.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img src="images/LogicalOp.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="filter" class="level3">
+<h3 class="anchored" data-anchor-id="filter"><code>filter()</code></h3>
+<section id="filter-2015-and-above" class="level4">
+<h4 class="anchored" data-anchor-id="filter-2015-and-above">Filter 2015 and above</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2015</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 648 × 18
+   country   who_region  year    pop incidence_100k incidence_number hiv_percent
+   &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt;  &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;
+ 1 Afghanis… EMR         2015 3.37e7          189              64000        0.3 
+ 2 Afghanis… EMR         2016 3.47e7          189              65000        0.31
+ 3 Afghanis… EMR         2017 3.55e7          189              67000        0.31
+ 4 Albania   EUR         2015 2.92e6           16                480        0.82
+ 5 Albania   EUR         2016 2.93e6           16                480        0.83
+ 6 Albania   EUR         2017 2.93e6           20                580        0.85
+ 7 Algeria   AFR         2015 3.99e7           74              30000        0.58
+ 8 Algeria   AFR         2016 4.06e7           70              29000        0.6 
+ 9 Algeria   AFR         2017 4.13e7           70              29000        0.62
+10 American… WPR         2015 5.55e4            8.3                5        0.1 
+# ℹ 638 more rows
+# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,
+#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,
+#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,
+#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,
+#   case_detection_percent &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="filter-india" class="level4">
+<h4 class="anchored" data-anchor-id="filter-india">Filter India</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> <span class="st">"India"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 18 × 18
+   country who_region  year      pop incidence_100k incidence_number hiv_percent
+   &lt;chr&gt;   &lt;chr&gt;      &lt;int&gt;    &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;
+ 1 India   SEA         2000   1.05e9            289          3040000         7  
+ 2 India   SEA         2001   1.07e9            288          3090000         7  
+ 3 India   SEA         2002   1.09e9            287          3130000         7  
+ 4 India   SEA         2003   1.11e9            285          3160000         7  
+ 5 India   SEA         2004   1.13e9            282          3180000         7  
+ 6 India   SEA         2005   1.14e9            279          3190000         7  
+ 7 India   SEA         2006   1.16e9            274          3180000         7  
+ 8 India   SEA         2007   1.18e9            268          3160000         7  
+ 9 India   SEA         2008   1.20e9            261          3130000         6.8
+10 India   SEA         2009   1.21e9            254          3090000         6.6
+11 India   SEA         2010   1.23e9            247          3050000         6.3
+12 India   SEA         2011   1.25e9            241          3000000         5.9
+13 India   SEA         2012   1.26e9            234          2960000         5.4
+14 India   SEA         2013   1.28e9            228          2920000         4.9
+15 India   SEA         2014   1.29e9            223          2880000         4.3
+16 India   SEA         2015   1.31e9            217          2840000         4  
+17 India   SEA         2016   1.32e9            211          2790000         3.3
+18 India   SEA         2017   1.34e9            204          2740000         3.1
+# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,
+#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,
+#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,
+#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,
+#   case_detection_percent &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="filter-by-year-and-country" class="level4">
+<h4 class="anchored" data-anchor-id="filter-by-year-and-country">Filter by year and country</h4>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2015</span> <span class="sc">&amp;</span> country <span class="sc">==</span> <span class="st">"India"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 18
+  country who_region  year       pop incidence_100k incidence_number hiv_percent
+  &lt;chr&gt;   &lt;chr&gt;      &lt;int&gt;     &lt;int&gt;          &lt;dbl&gt;            &lt;int&gt;       &lt;dbl&gt;
+1 India   SEA         2015    1.31e9            217          2840000         4  
+2 India   SEA         2016    1.32e9            211          2790000         3.3
+3 India   SEA         2017    1.34e9            204          2740000         3.1
+# ℹ 11 more variables: hiv_incidence_100k &lt;dbl&gt;, hiv_number &lt;int&gt;,
+#   mort_nohiv_100k &lt;dbl&gt;, mort_nohiv_number &lt;int&gt;, mort_hiv_100k &lt;dbl&gt;,
+#   mort_hiv_number &lt;int&gt;, mort_100k &lt;dbl&gt;, mort_number &lt;int&gt;,
+#   case_fatality_ratio &lt;dbl&gt;, new_incidence_100k &lt;dbl&gt;,
+#   case_detection_percent &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="in-function" class="level3">
+<h3 class="anchored" data-anchor-id="in-function"><code>%in%</code> function</h3>
+<ul>
+<li><p>To <code>filter()</code> a categorical variable for only certain levels, we can use the <code>%in%</code> operator.</p></li>
+<li><p>Let’s see data from India, Nepal, Pakistan and Bangladesh First we will have to figure out how those are spelled in this dataset.</p></li>
+<li><p>Open the spreadsheet viewer and find out.</p></li>
+<li><p>We’ll see a way to find them in code later on in the course.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the Indian Subcontinent Variable</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>indian_subcont <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">"India"</span>,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Nepal"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Pakistan"</span>,</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Bangladesh"</span>, </span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Afghanistan"</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter using the %in% function</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>tb  <span class="sc">|&gt;</span>  </span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> indian_subcont) <span class="sc">%&gt;%</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(country)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 1
+  country    
+  &lt;chr&gt;      
+1 Afghanistan
+2 Bangladesh 
+3 India      
+4 Nepal      
+5 Pakistan   </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="summarize" class="level3">
+<h3 class="anchored" data-anchor-id="summarize"><code>summarize()</code></h3>
+<ul>
+<li><p>The <code>summarize()</code> function summarizes multiple values to a single value.</p></li>
+<li><p>On its own the <code>summarize()</code> function doesn’t seem to be all that useful.</p></li>
+</ul>
+<p>The dplyr package provides a few convenience functions called <code>n()</code> and <code>n_distinct()</code> that tell you the number of observations or the number of distinct values of a particular variable.</p>
+<p><code>summarize()</code> is the same as <code>summarise()</code></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_hiv_percent =</span> <span class="fu">mean</span>(hiv_percent, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_hiv_percent =</span> <span class="fu">sd</span>(hiv_percent, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  mean_hiv_percent sd_hiv_percent
+             &lt;dbl&gt;          &lt;dbl&gt;
+1             12.1           17.7</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="group_by" class="level3">
+<h3 class="anchored" data-anchor-id="group_by"><code>group_by()</code></h3>
+<ul>
+<li><p>We saw that <code>summarize()</code> isn’t that useful on its own. Neither is <code>group_by()</code>.</p></li>
+<li><p>All this does is takes an existing data frame and converts it into a grouped data frame where operations are performed by group.</p></li>
+<li><p>The real power comes in where <code>group_by()</code> and <code>summarize()</code> are used together. First, write the <code>group_by()</code> statement. Then pipe the result to a call to <code>summarize()</code>.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(who_region)  <span class="sc">|&gt;</span>  </span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_inc =</span> <span class="fu">mean</span>(incidence_100k, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_inc =</span> <span class="fu">sd</span>(incidence_100k, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  who_region mean_inc sd_inc
+  &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt;
+1 AFR           297.   248. 
+2 AMR            32.8   45.6
+3 EMR            83.7  123. 
+4 EUR            42.7   51.1
+5 SEA           260.   151. 
+6 WPR           126.   153. </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="mutate" class="level3">
+<h3 class="anchored" data-anchor-id="mutate"><code>mutate()</code></h3>
+<ul>
+<li>Mutate creates a new variable or modifies an existing one.</li>
+</ul>
+<p><img src="images/dplyr_mutate.png" class="img-fluid"></p>
+</section>
+<section id="if_else" class="level3">
+<h3 class="anchored" data-anchor-id="if_else"><code>if_else()</code></h3>
+<p>Lets create a column called <code>ind_sub</code> if the country is in the Indian Subcontinent.</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>tb <span class="sc">|&gt;</span> </span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">indian_sub1 =</span> <span class="fu">if_else</span>(country <span class="sc">%in%</span> indian_subcont, </span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Indian Subcontinent"</span>, <span class="st">"Others"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, indian_sub1) <span class="sc">|&gt;</span> </span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 218 × 2
+   country             indian_sub1        
+   &lt;chr&gt;               &lt;chr&gt;              
+ 1 Afghanistan         Indian Subcontinent
+ 2 Albania             Others             
+ 3 Algeria             Others             
+ 4 American Samoa      Others             
+ 5 Andorra             Others             
+ 6 Angola              Others             
+ 7 Anguilla            Others             
+ 8 Antigua and Barbuda Others             
+ 9 Argentina           Others             
+10 Armenia             Others             
+# ℹ 208 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="case_when" class="level3">
+<h3 class="anchored" data-anchor-id="case_when"><code>case_when()</code></h3>
+<p>Alternative of <code>if_else()</code></p>
+<p><img src="images/case_when.jpg" class="img-fluid"></p>
+</section>
+<section id="if_else-vs-case_when" class="level3">
+<h3 class="anchored" data-anchor-id="if_else-vs-case_when"><code>if_else()</code> vs <code>case_when()</code></h3>
+<p>Note that the <code>if_else()</code> function may result in slightly shorter code if you only need to code for 2 options.</p>
+<p>For more options, nested <code>if_else()</code> statements become hard to read and could result in mismatched parentheses so <code>case_when()</code> will be a more elegant solution.</p>
+</section>
+<section id="join" class="level3">
+<h3 class="anchored" data-anchor-id="join"><code>join()</code></h3>
+<ul>
+<li><p>Typically in a data science or data analysis project one would have to work with many sources of data.</p></li>
+<li><p>The researcher must be able to combine multiple datasets to answer the questions he or she is interested in.</p></li>
+<li><p>As with the other <code>dplyr</code> verbs, there are different families of verbs that are designed to work with relational data and one of the most commonly used family of verbs are the mutating joins.</p></li>
+</ul>
+<p><img src="images/dplyr_joins.jpg" class="img-fluid"></p>
+<section id="more-on-join" class="level4">
+<h4 class="anchored" data-anchor-id="more-on-join">More on <code>join()</code></h4>
+<ul>
+<li><p><code>left_join(x, y)</code> which combines all columns in data frame <code>x</code> with those in data frame <code>y</code> but only retains rows from <code>x</code>.</p></li>
+<li><p><code>right_join(x, y)</code> also keeps all columns but operates in the opposite direction, returning only rows from <code>y</code>.</p></li>
+<li><p><code>full_join(x, y)</code> combines all columns of <code>x</code> with all columns of <code>y</code> and retains all rows from both data frames.</p></li>
+<li><p><code>inner_join(x, y)</code> combines all columns present in either <code>x</code> or <code>y</code> but only retains rows that are present in both data frames.</p></li>
+<li><p><code>anti_join(x, y)</code> returns the columns from <code>x</code> only and retains rows of <code>x</code> that are not present in <code>y</code>.</p></li>
+<li><p><code>anti_join(y, x)</code> returns the columns from <code>y</code> only and retains rows of <code>y</code> that are not present in <code>x</code>.</p></li>
+</ul>
+</section>
+<section id="visual-representation-of-the-left_join" class="level4">
+<h4 class="anchored" data-anchor-id="visual-representation-of-the-left_join">Visual representation of the <code>left_join()</code></h4>
+<p><img src="images/dplyr_joins_left.png" class="img-fluid"></p>
+</section>
+<section id="visual-representation-of-the-right_join" class="level4">
+<h4 class="anchored" data-anchor-id="visual-representation-of-the-right_join">Visual representation of the <code>right_join()</code></h4>
+<p><img src="images/dplyr_joins_right.png" class="img-fluid"></p>
+</section>
+<section id="visual-representation-of-the-full_join" class="level4">
+<h4 class="anchored" data-anchor-id="visual-representation-of-the-full_join">Visual representation of the <code>full_join()</code></h4>
+<p><img src="images/dplyr_joins_full.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="pivot" class="level3">
+<h3 class="anchored" data-anchor-id="pivot"><code>pivot()</code></h3>
+<p>Most often, when working with our data we may have to reshape our data from long format to wide format and back. We can use the <code>pivot</code> family of functions to achieve this task.</p>
+<p><img src="images/long_wide.png" class="img-fluid"></p>
+</section>
+<section id="other-useful-functions" class="level3">
+<h3 class="anchored" data-anchor-id="other-useful-functions">Other Useful Functions</h3>
+<section id="drop_na" class="level5">
+<h5 class="anchored" data-anchor-id="drop_na"><code>drop_na()</code></h5>
+<p>The <code>drop_na()</code> function is extremely useful for when we need to subset a variable to remove missing values.</p>
+</section>
+<section id="select" class="level5">
+<h5 class="anchored" data-anchor-id="select"><code>select()</code></h5>
+<p>While the <code>filter()</code> function allows you to return only certain rows matching a condition, the <code>select()</code> function returns only certain <em>columns</em>. The first argument is the data, and subsequent arguments are the columns you want.</p>
+</section>
+</section>
+</section>
+<section id="more-resources-for-dplyr" class="level1">
+<h1>More Resources for <code>dplyr</code></h1>
+<ul>
+<li><p>Check out the <a href="https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling Cheatsheet</a> that covers dplyr and tidyr functions.</p></li>
+<li><p>Review the <a href="https://r4ds.had.co.nz/tibbles.html">Tibbles</a> chapter of the excellent, free <a href="http://r4ds.had.co.nz"><strong><em>R for Data Science</em> book</strong></a>.</p></li>
+<li><p>Check out the <a href="https://r4ds.had.co.nz/transform.html">Transformations</a> chapter to learn more about the <code>dplyr</code> package. Note that this chapter also uses the graphing package <code>ggplot2</code> which we have covered yesterday.</p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
