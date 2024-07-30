@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Spatial Data Science for Public Health - Workshop",
+    "section": "",
+    "text": "Welcome to the Day 3 and 4 of The Summer School Open Stack - Geospatial Models for Public Health!\nThe goal for these two days is to highlight the applications of GIS in Public Health while providing the foundational concepts in Spatial Epidemiology.\nThe workshop introduces the participants to the field of Spatial Data Science through the statistical programming language R.\nThe workshop is intended as an introductory window into the world of spatial data analysis and visualization for better public health outcomes.\nWorkshop materials can be accessed from the github repository GIS4EPI-Workshop\n\n\n\n\nUnderstand Essential Concepts in Spatial Epidemiology\nGet the “bigger” picture of Spatial Data Science - inculcate Geographic/Spatial Thinking\nCreate interest in Spatial Data Science (We do not aim to teach you everything, rather, we want motivate you to learn on your own, so you can fill the gaps in your knowledge)\nLearn about the Best Practices for Reproducible Spatial Data Research and Analysis\nGain hands-on experience with spatial data analysis and visualization (The lab-work is DIY. It is designed to bring you out of your comfort zone and initiate discussions and dialogue)"
+  },
+  {
+    "objectID": "index.html#objectives-of-the-workshop",
+    "href": "index.html#objectives-of-the-workshop",
+    "title": "Spatial Data Science for Public Health - Workshop",
+    "section": "",
+    "text": "Understand Essential Concepts in Spatial Epidemiology\nGet the “bigger” picture of Spatial Data Science - inculcate Geographic/Spatial Thinking\nCreate interest in Spatial Data Science (We do not aim to teach you everything, rather, we want motivate you to learn on your own, so you can fill the gaps in your knowledge)\nLearn about the Best Practices for Reproducible Spatial Data Research and Analysis\nGain hands-on experience with spatial data analysis and visualization (The lab-work is DIY. It is designed to bring you out of your comfort zone and initiate discussions and dialogue)"
+  },
+  {
+    "objectID": "index.html#lectures",
+    "href": "index.html#lectures",
+    "title": "Spatial Data Science for Public Health - Workshop",
+    "section": "Lectures",
+    "text": "Lectures\n\nEssential concepts\nMainly to get the big picture\nEnthusing interest rather than teaching"
+  },
+  {
+    "objectID": "index.html#practical-sessions",
+    "href": "index.html#practical-sessions",
+    "title": "Spatial Data Science for Public Health - Workshop",
+    "section": "Practical sessions",
+    "text": "Practical sessions\n\nDo it yourself\nGet skilled in the process\nUse data for dialogue!"
+  },
+  {
+    "objectID": "index.html#software-and-packages",
+    "href": "index.html#software-and-packages",
+    "title": "Spatial Data Science for Public Health - Workshop",
+    "section": "Software and Packages",
+    "text": "Software and Packages\n\nR version \\(\\geq\\) 4.3.* (https://cran.rstudio.com/)\nPackages\n\ntidyverse\nhere\npatchwork\nsf\nrgeoda\ntidygeocoder\nexactextractr\nggmap\n\nggspatial\n\nepitrix\njanitor\nleaflet\n\nspdep\n\n\nYou can install the necessary packages using the inbuilt R function install.packages(\"tidyverse\") or using the pak::pak(\"tidyverse) function from the pak package."
+  },
+  {
+    "objectID": "index.html#hardware",
+    "href": "index.html#hardware",
+    "title": "Spatial Data Science for Public Health - Workshop",
+    "section": "Hardware",
+    "text": "Hardware\n\nLaptop in good working condition with atleast 8GB RAM (preferably 16GB)\nWorking WiFi connection"
+  }
+]
